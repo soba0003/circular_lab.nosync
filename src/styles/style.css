@@ -1,0 +1,99 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px 0px;
+}
+
+/* general */
+
+:root {
+  --orange: #ff671f;
+  --yellow: #f7c85e;
+  --baige: #f3eae0;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+h1,
+h2,
+h4,
+a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  word-break: break-word;
+  color: var(--black);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2,
+a {
+  font-size: 30px;
+}
+
+h3,
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.7px;
+}
+
+.p_desktop {
+  font-size: 18px;
+}
+
+.h1_card {
+  font-size: 26px;
+}
+
+.when_card {
+  font-size: 10px;
+}
+
+.p_card {
+  font-size: 12px;
+}
+
+.a_card {
+  font-size: 16px;
+}
+
+h3 {
+  line-height: 30px;
+}
+
+.sti {
+  margin-bottom: 20px;
+}

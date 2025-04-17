@@ -1,0 +1,38 @@
+---
+const { h2_box } = Astro.props;
+---
+
+<section>
+  <h2>{h2_box}</h2>
+  <h4>Åbningstider</h4>
+  <p>Circular Lab er åbent mandag til fredag 8.30 – 22.00</p>
+  <p>
+    Du velkommen til at benytte lokalet i åbningstiden, så længe der ikke
+    foregår undervisning, workshops eller andet. <a href="#"
+      >(Tjek vores kalender for at se kommende events)</a
+    >.
+  </p>
+  <h4>Adgang til labbet</h4>
+  <p>Labbet er placeret på Guldbergsgade 29N, Lokale A129.</p>
+  <h4>Kontakt</h4>
+  <p>Mail: circular@kea.dk</p>
+</section>
+
+<style>
+  section {
+    background-color: var(--white);
+    padding: 25px;
+    margin-bottom: 70px;
+    max-width: 320px;
+  }
+  h2,
+  h4,
+  p {
+    margin-bottom: 20px;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+</style>
