@@ -29,7 +29,7 @@ console.log(data);
     <Menu />
   </header>
   <main>
-    <section>
+    <section class="margin_mobil">
       <p class="sti">
         Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / Cirkular Lab
       </p>
@@ -52,8 +52,9 @@ console.log(data);
       </p>
     </section>
     <Praktisk h2_box="Praktisk" />
-    <EventsPreview />
-    <!-- {data.map((event) => <EventCard {event} />)} -->
+    <EventsPreview>
+      {data.map((event) => <EventCard {event} />)}
+    </EventsPreview>
   </main>
 </Layout>
 

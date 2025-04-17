@@ -97,3 +97,11 @@ h3 {
 .sti {
   margin-bottom: 20px;
 }
+
+.margin_mobil {
+  margin: 0 15px;
+}
+
+.flex {
+  display: flex;
+}

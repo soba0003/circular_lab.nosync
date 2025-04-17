@@ -1,15 +1,55 @@
 ---
-
+import linkArrow from "../assets/link_arrow.svg";
 ---
 
 <section>
   <h1>Events i Circular Lab</h1>
   <slot />
-  <slot />
-  <slot />
-  <slot />
-  <div>
-    <img src="" alt="" />
-    <a href="#">Se alle events</a>
+  <div class="card_placeholder">
+    <h1 class="h1_card">Repair Café</h1>
+    <p class="when_card">9. april 2025 14:00-16:00</p>
   </div>
+  <div class="card_placeholder">
+    <h1 class="h1_card">Repair Café</h1>
+    <p class="when_card">9. april 2025 14:00-16:00</p>
+  </div>
+  <div class="card_placeholder">
+    <h1 class="h1_card">Repair Café</h1>
+    <p class="when_card">9. april 2025 14:00-16:00</p>
+  </div>
+  <div class="card_placeholder">
+    <h1 class="h1_card">Repair Café</h1>
+    <p class="when_card">9. april 2025 14:00-16:00</p>
+  </div>
+  <a class="events_link flex" href="#"
+    ><img src={linkArrow.src} alt="sort pil mod højre" />Se alle events</a
+  >
 </section>
+
+<style>
+  section {
+    background-color: var(--baige);
+    padding: 0 15px;
+    padding-top: 50px;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  .card_placeholder {
+    width: 200px;
+    height: 450px;
+    background-color: var(--orange);
+    border: solid 1px #000;
+    margin-bottom: 20px;
+  }
+  .events_link {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    align-items: center;
+    gap: 10px;
+  }
+  img {
+    height: 30px;
+    width: auto;
+  }
+</style>
