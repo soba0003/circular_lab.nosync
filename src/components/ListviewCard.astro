@@ -1,0 +1,54 @@
+---
+import linkArrow from "../assets/link_arrow.svg";
+import repair from "../assets/repair.jpg";
+---
+
+<article class="margin_mobil">
+  <img class="list_img" src={repair.src} alt="" />
+  <h4 class="h4_list">Repair Café</h4>
+  <p class="when_card">9. april 2025 14:00-16:00</p>
+  <p class="when_card">Guldbergsgade</p>
+  <p class="description">
+    Repair Café i Circular Lab hvor vi arbejder med den cirkulære
+    forretningmodel "reparation". På denne workshop har vi fokus på lapning af
+    tekstiler.
+  </p>
+  <a class="list_link flex no_line a_card" href="#"
+    ><img class="arrow" src={linkArrow.src} alt="sort pil mod højre" />Læs mere</a
+  >
+  <a class="list_link flex no_line a_card" href="#"
+    ><img class="arrow" src={linkArrow.src} alt="sort pil mod højre" />Tilmeld
+    dig eventet</a
+  >
+</article>
+
+<style>
+  article {
+    max-width: 270px;
+  }
+  .list_link {
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .arrow {
+    height: 17px;
+    width: auto;
+  }
+  .list_img {
+    height: 180px;
+    width: 270px;
+    object-fit: cover;
+  }
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .description {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .when_card {
+    margin-top: -4px;
+  }
+</style>
