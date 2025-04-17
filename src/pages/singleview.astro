@@ -1,0 +1,78 @@
+---
+//@ts-nocheck
+// tjekker ikke for notescript fejl så
+import "../styles/style.css";
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import ListviewCard from "../components/ListviewCard.astro";
+import LinkButton from "../components/LinkButton.astro";
+import CLInfo from "../components/CLInfo.astro";
+---
+
+<Layout title="Repair Café">
+  <header>
+    <Menu />
+  </header>
+  <main>
+    <section class="margin_mobil">
+      <p class="sti">
+        Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / Cirkular Lab
+        / Events i Circular Lab / Repair Café
+      </p>
+      <LinkButton />
+      <h1>Repair Café</h1>
+      <p class="when">9. april 2025 14:00-16:00</p>
+      <p class="when">
+        Circular Lab, GBG.A 129, Guldbergsgade 29N, 2200 København, Denmark
+      </p>
+      <h3>
+        Repair Café i Circular Lab hvor vi arbejder med den cirkulære
+        forretningmodel "reparation". På denne workshop har vi fokus på lapning
+        af tekstiler.
+      </h3>
+      <p>
+        Vil du gerne lære mere om cirkulære strategier inden for reperation? Vil
+        du gerne lære hvordan man kan reparere sit tøj ved hjælp af lapper og
+        tråd? Så kom med til Circular Labs Repair Café, hvor du lærer
+        forskellige teknikker du kan bruge til at reparere dit tøj eller
+        opgradere det til noget endnu bedre. Se hvad du har af ting i
+        klædeskabet der trænger til en overhaling, måske har du hul i et par
+        bukser, måske en skjorte der kunne klare lidt ekstra gas eller en jakke
+        med revne i foret - så kigger vi på det i fællesskab og du lærer
+        teknikker til hvordan du selv kan fikse tøjet og derved forlænge
+        levetiden af dit klædeskab.<br /><br />NB: Du skal selv medbringe tøjet
+        du enten vil reparere eller dekorere med de teknikker du lærer.
+      </p>
+      <img src="" alt="" />
+      <h5>Hvorfor deltage?</h5>
+      <p></p>
+      <h5>Program:</h5>
+      <ul>
+        <li>Introduktion</li>
+        <li>
+          Hvad har i med, og hvilke teknikker kan i bruge? (Du skal selv
+          medbringe tøjet du enten vil reparere eller dekorere med de teknikker
+          du lærer.)
+        </li>
+        <li>
+          Workshoppen faciliteres af Nikolaj Storm (Circular Lab) og Stine
+          (Fashion Lab)
+        </li>
+        <li>
+          Spørgsmål og Sparring. Der er afsat tid så der er mulighed for
+          spørgsmål og individuel sparring.
+        </li>
+      </ul>
+      <LinkButton />
+      <CLInfo />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h1,
+  h3,
+  p {
+    margin-bottom: 20px;
+  }
+</style>

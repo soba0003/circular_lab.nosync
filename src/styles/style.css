@@ -25,7 +25,9 @@ img {
 h1,
 h2,
 h4,
-a {
+a,
+.sti,
+h5 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
@@ -35,7 +37,8 @@ a {
 }
 
 h3,
-p {
+p,
+li {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
 }
@@ -44,8 +47,10 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
-a {
+a,
+li {
   word-break: break-word;
   color: var(--black);
 }
@@ -64,7 +69,8 @@ h4 {
   font-size: 18px;
 }
 
-p {
+p,
+li {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.7px;
@@ -86,7 +92,8 @@ p {
   font-size: 12px;
 }
 
-.a_card {
+.a_card,
+h5 {
   font-size: 16px;
 }
 
