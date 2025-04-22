@@ -7,6 +7,7 @@ import Menu from "../components/Menu.astro";
 import ListviewCard from "../components/ListviewCard.astro";
 import LinkButton from "../components/LinkButton.astro";
 import CLInfo from "../components/CLInfo.astro";
+import Adresse from "../components/Adresse.astro";
 ---
 
 <Layout title="Repair Café">
@@ -19,7 +20,7 @@ import CLInfo from "../components/CLInfo.astro";
         Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / Cirkular Lab
         / Events i Circular Lab / Repair Café
       </p>
-      <LinkButton />
+      <LinkButton button="Tilmeld dig eventet" />
       <h1>Repair Café</h1>
       <p class="when">9. april 2025 14:00-16:00</p>
       <p class="when">
@@ -63,8 +64,9 @@ import CLInfo from "../components/CLInfo.astro";
           spørgsmål og individuel sparring.
         </li>
       </ul>
-      <LinkButton />
+      <LinkButton button="Tilmeld dig eventet her" />
       <CLInfo />
+      <Adresse />
     </section>
   </main>
 </Layout>

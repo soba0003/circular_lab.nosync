@@ -117,6 +117,10 @@ h3 {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .no_line {
   text-decoration: none;
 }
