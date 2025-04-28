@@ -5,6 +5,21 @@ import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import ListviewCard from "../components/ListviewCard.astro";
+
+const url = "https://hwbsearhqsaulwrckpsy.supabase.co/rest/v1/events?select=*";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnNlYXJocXNhdWx3cmNrcHN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjcxODAsImV4cCI6MjA1OTg0MzE4MH0.jLeXXi5Q43rPmHHpGYTqtm9b5RT_yFSc4X4RZSs012I";
+
+// så den kan læse nøglen
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+// console log kan kun læses i terminalen (du skal 'run nmp dev' først)
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
 ---
 
 <Layout title="Events i Circular Lab">
@@ -14,12 +29,15 @@ import ListviewCard from "../components/ListviewCard.astro";
   <main>
     <section class="margin_mobil">
       <p class="sti">
-        Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / Circular Lab
+        Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / <a
+          class="sti"
+          href="/">Circular Lab</a
+        >
         / Events i Circular Lab
       </p>
       <h1>Events i Circular Lab</h1>
     </section>
-    <ListviewCard />
+    {data.map((event) => <ListviewCard {event} />)}
   </main>
 </Layout>
 
@@ -28,5 +46,9 @@ import ListviewCard from "../components/ListviewCard.astro";
   h3,
   p {
     margin-bottom: 20px;
+  }
+  .sti {
+    font-size: 14px;
+    text-decoration: none;
   }
 </style>

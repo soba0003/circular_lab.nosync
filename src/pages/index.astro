@@ -57,6 +57,11 @@ console.log(data);
     </section>
     <Praktisk />
     <EventsPreview>
+      <!-- data = al data fra databasen -->
+      <!-- map = den løber alle arreys igennem -->
+      <!-- event = hvad jeg kalder hver enkelt objekt -->
+      <!-- => = hvad vil jeg gerne gøre ved dette éne 'event' -->
+      <!-- sender alt indhold i product med til EventCard componentet -->
       {data.map((event) => <EventCard {event} />)}
     </EventsPreview>
   </main>

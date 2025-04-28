@@ -1,19 +1,21 @@
 ---
 import linkArrow from "../assets/link_arrow.svg";
 import repair from "../assets/repair.jpg";
+const { event } = Astro.props;
 ---
 
 <article class="margin_mobil">
   <img class="list_img" src={repair.src} alt="" />
-  <h4 class="h4_list">Repair Café</h4>
-  <p class="when_card">9. april 2025 14:00-16:00</p>
+  <h4 class="h4_list">{event.event_title}</h4>
+  <p class="when_card">
+    {event.event_date}
+    {event.event_start}-{event.event_end}
+  </p>
   <p class="when_card">Guldbergsgade</p>
   <p class="description">
-    Repair Café i Circular Lab hvor vi arbejder med den cirkulære
-    forretningmodel "reparation". På denne workshop har vi fokus på lapning af
-    tekstiler.
+    {event.event_h2}
   </p>
-  <a class="list_link flex no_line a_card" href="#"
+  <a class="list_link flex no_line a_card" href=`/event/${event.id}`
     ><img class="arrow" src={linkArrow.src} alt="sort pil mod højre" />Læs mere</a
   >
   <a class="list_link flex no_line a_card" href="#"

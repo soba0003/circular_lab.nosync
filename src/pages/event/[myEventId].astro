@@ -1,0 +1,88 @@
+---
+//@ts-nocheck
+// tjekker ikke for notescript fejl så
+
+import "../../styles/style.css";
+import Layout from "../../layouts/Layout.astro";
+import Menu from "../../components/Menu.astro";
+import ListviewCard from "../../components/ListviewCard.astro";
+import LinkButton from "../../components/LinkButton.astro";
+import CLInfo from "../../components/CLInfo.astro";
+import Adresse from "../../components/Adresse.astro";
+
+export async function getStaticPaths() {
+  const url =
+    "https://hwbsearhqsaulwrckpsy.supabase.co/rest/v1/events?select=*";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnNlYXJocXNhdWx3cmNrcHN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjcxODAsImV4cCI6MjA1OTg0MzE4MH0.jLeXXi5Q43rPmHHpGYTqtm9b5RT_yFSc4X4RZSs012I";
+
+  // så den kan læse nøglen
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data.map((event) => {
+    return {
+      params: { myEventId: event.id },
+      props: { myEvent: event },
+    };
+  });
+}
+
+const { myEvent } = Astro.props;
+---
+
+<Layout title={myEvent.event_title}>
+  <header>
+    <Menu />
+  </header>
+  <main>
+    <section class="margin_mobil">
+      <p class="sti">
+        Forside / Studieliv og Faciliteter / Labs / Cirkular Labs / <a
+          class="sti"
+          href="../">Cirkular Lab</a
+        >
+        / <a class="sti" href="../listview">Events i Circular Lab</a> / Repair Café
+      </p>
+      <LinkButton button="Tilmeld dig eventet" />
+      <h1>{myEvent.event_title}</h1>
+      <p class="when">
+        {myEvent.event_date}
+        {myEvent.event_start}-{myEvent.event_end}
+      </p>
+      <p class="when">
+        Circular Lab, GBG.A 129, Guldbergsgade 29N, 2200 København, Denmark
+      </p>
+      <h3>
+        {myEvent.event_h2}
+      </h3>
+      <p>
+        {myEvent.event_description}
+      </p>
+      <img src="" alt="" />
+      <h5>Hvorfor deltage?</h5>
+      <p>{myEvent.event_why_come}</p>
+      <LinkButton button="Tilmeld dig eventet her" />
+      <CLInfo />
+      <Adresse />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h1,
+  h3,
+  p {
+    margin-bottom: 20px;
+  }
+
+  .sti {
+    font-size: 14px;
+    text-decoration: none;
+  }
+</style>
