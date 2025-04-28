@@ -22,6 +22,10 @@ const options = {
 // console log kan kun læses i terminalen (du skal 'run nmp dev' først)
 const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
+
+//skulle formatere tiden til kun at være timer og minutter (virker ikke)
+//const formatTime = (time) => time.slice(0, 5);
+//    {formatTime(event.event_start)}-{event.event_end}
 ---
 
 <Layout title="Circular Lab">
